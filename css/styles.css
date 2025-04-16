@@ -516,13 +516,14 @@ box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0
 .modal-close {
 width: 24px;
 height: 24px;
-fill: var(--accent-color);
-border: 1px rgba(0, 0, 0, 0.10);
+border: 1px solid rgba(0, 0, 0, 0.10);
 border-radius: 50%;
 display: flex;
 align-items: center;
 justify-content: center;
 margin-left: auto;
+margin-bottom: 24px;
+background-color: var(--accent-color);
 }
 .modal-close-icon {
   fill: var(--main-color);
@@ -531,4 +532,86 @@ margin-left: auto;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+}
+.modal-title {
+color: var(--main-color);
+text-align: center;
+font-weight: 500;
+margin-bottom: 16px;
+}
+.modal-input {
+  min-width: 360px;
+  height: 40px;
+  border-radius: 4px;
+border: 1px solid rgba(46, 47, 66, 0.40);
+background-color: transparent;
+outline: transparent;
+padding-left: 38px;
+font-size: 12px;
+letter-spacing: 0.48px;
+}
+.modal-input:focus {
+  border: 1px solid var(--brand-color);
+}
+.modal-input:focus + .modal-icon {
+fill: var(--brand-color);
+}
+.submit-button{
+  display: inline-flex;
+padding: 16px 32px;
+align-items: flex-start;
+gap: 10px;
+border-radius: 4px;
+border: 1px transparent;
+background-color: var(--brand-color);
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+color: var(--white-color);
+}
+.submit-button:hover,
+.submit-button:focus {
+  background-color: var(--pressed-color);
+}
+.modal-comment::placeholder {
+color: (46, 47, 66, 0.40);
+font-size: 12px;
+letter-spacing: 0.48px;
+}
+.modal-comment {
+  min-width: 360px;
+  height: 120px;
+  padding: 8px 16px;
+  border-radius: 4px;
+border: 1px solid rgba(46, 47, 66, 0.40);
+background-color: transparent;
+outline: transparent;
+font-size: 12px;
+letter-spacing: 0.48px;
+resize: none;
+}
+.modal-comment:focus {
+  border: 1px solid var(--brand-color);
+}
+.label-text {
+  color: var(--light-color);
+font-size: 12px;
+letter-spacing: 0.48px;
+display: inline-block;
+}
+.modal-icon {
+  color: var(--main-color);
+  position: absolute;
+  transform: translateY(-50%);
+  left: 5px;
+  top: 50%;
+  margin-left: 8px;
+}
+.input-wrap {
+  position: relative;
+}
+.modal-label {
+  position: relative;
+  margin-bottom: 4px;
+}
+.modal-field {
+  margin-bottom: 8px;
 }
